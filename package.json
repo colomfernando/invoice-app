@@ -16,6 +16,7 @@
     "react-scripts": "^5.0.0",
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
+    "standard-version": "^9.3.2",
     "styled-components": "^5.2.3",
     "typescript": "^4.3.2",
     "web-vitals": "^2.1.4"
@@ -43,7 +44,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
   },
   "eslintConfig": {
     "extends": [
