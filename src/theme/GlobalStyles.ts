@@ -24,6 +24,8 @@ html {
  */
 body {
   margin: 0;
+	background-color: ${({ theme }) => theme.body};
+	color: ${({ theme }) => theme.text}
 }
 /**
  * Render the main element consistently in IE.
