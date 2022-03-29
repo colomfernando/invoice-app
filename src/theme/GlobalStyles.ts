@@ -12,7 +12,8 @@ html {
   line-height: 1; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 	box-sizing: border-box;
-	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -24,6 +25,7 @@ html {
  */
 body {
   margin: 0;
+	height: 100vh;
 	background-color: ${({ theme }) => theme.body};
 	color: ${({ theme }) => theme.text}
 }

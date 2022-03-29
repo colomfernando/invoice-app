@@ -1,16 +1,4 @@
 const palette = {
-  primary: {
-    light: '#f2a07c',
-    main: '#ef8354',
-    dark: '#d66533',
-    contrastText: '#fff',
-  },
-  secondary: {
-    light: '#7e8ba3',
-    main: '#4f5d75',
-    dark: '#36445c',
-    contrastText: '#fff',
-  },
   error: {
     main: '#ff3333',
   },
@@ -32,6 +20,11 @@ const palette = {
     600: '#757575',
     800: '#424242',
     900: '#212121',
+  },
+
+  status: {
+    paid: '#4cc355',
+    pending: '#F19143',
   },
 };
 

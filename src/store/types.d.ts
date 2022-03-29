@@ -1,5 +1,4 @@
 export interface BillData {
-  id: number;
   name: string;
   email: string;
   street: string;
@@ -9,10 +8,14 @@ export interface BillData {
   postalCode: string;
 }
 
+export type Status = 'paid' | 'pending';
+
 export interface Invoice {
-  invoiceData: Date;
-  invoiceDue: Date;
+  id: number;
+  invoiceDate: number;
+  due: number;
   description: string;
+  status: Status;
   item: {
     name: string;
     qty: number;
