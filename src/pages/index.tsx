@@ -37,6 +37,14 @@ const Home: React.FC = () => {
   return (
     <MainLayout>
       <Styles.Wrapper>
+        <Styles.Header>
+          <Styles.WrapperTitle>
+            <Styles.Title>Invoices</Styles.Title>
+            <Styles.TotalInvoice>{`${7} invoices`}</Styles.TotalInvoice>
+          </Styles.WrapperTitle>
+          <Styles.Filter />
+          <Styles.CreateInvoice />
+        </Styles.Header>
         {mock.map((item) => (
           <Styles.Invoice key={item.id} {...item} />
         ))}
