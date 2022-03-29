@@ -3,11 +3,11 @@ import palette from './palette';
 export const lightMode = {
   body: palette.grey[200],
   backgroundCard: '#FFF',
-  text: '#0A122A',
+  text: '#191919',
 };
 
-export const darkTheme = {
-  body: '#0A122A',
-  backgroundCard: '#0e2a7d',
+export const darkMode = {
+  body: '#191919',
+  backgroundCard: '#2D4263',
   text: '#FBFAF8',
 };

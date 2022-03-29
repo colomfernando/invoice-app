@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './styles';
+import MainLayout from 'layout/MainLayout';
 import { Status } from 'store/types';
 export interface Mock {
   id: number;
@@ -34,11 +35,13 @@ const mock: Mock[] = [
 ];
 const Home: React.FC = () => {
   return (
-    <Styles.Wrapper>
-      {mock.map((item) => (
-        <Styles.Invoice key={item.id} {...item} />
-      ))}
-    </Styles.Wrapper>
+    <MainLayout>
+      <Styles.Wrapper>
+        {mock.map((item) => (
+          <Styles.Invoice key={item.id} {...item} />
+        ))}
+      </Styles.Wrapper>
+    </MainLayout>
   );
 };
 

@@ -9,6 +9,7 @@ export interface BillData {
 }
 
 export type Status = 'paid' | 'pending';
+export type Theme = 'lightMode' | 'darkMode';
 
 export interface Invoice {
   id: number;
@@ -28,6 +29,7 @@ export interface Invoice {
 
 export interface State {
   invoices: Invoice[];
+  theme: Theme;
 }
 
 export interface Action<P> {
@@ -35,4 +37,4 @@ export interface Action<P> {
   payload: P;
 }
 
-export type Actions = Action<Invoice>;
+export type Actions = Action<Invoice> | Action<Theme>;

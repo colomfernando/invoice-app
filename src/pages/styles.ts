@@ -4,7 +4,6 @@ import InvoiceCard from 'components/InvoiceCard';
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
