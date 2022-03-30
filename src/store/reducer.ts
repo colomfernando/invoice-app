@@ -1,8 +1,9 @@
 import { State, Actions, Theme } from './types';
 import types from './actionTypes';
+import invoices from './__mocks__/invoices';
 
 const initialState = {
-  invoices: [],
+  invoices: [...invoices],
   theme: 'lightMode' as Theme,
 };
 

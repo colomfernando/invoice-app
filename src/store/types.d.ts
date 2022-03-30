@@ -5,7 +5,7 @@ export interface BillData {
   number?: number;
   complement?: string;
   city: string;
-  postalCode: string;
+  postalCode: number;
 }
 
 export type Status = 'paid' | 'pending';
@@ -13,16 +13,13 @@ export type Theme = 'lightMode' | 'darkMode';
 
 export interface Invoice {
   id: number;
-  invoiceDate: number;
+  date: number;
   due: number;
   description: string;
   status: Status;
-  item: {
-    name: string;
-    qty: number;
-    price: number;
-    total: number;
-  };
+  qty: number;
+  price: number;
+  total: number;
   billFrom: BillData;
   billTo: BillData;
 }

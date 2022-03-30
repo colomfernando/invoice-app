@@ -1,12 +1,12 @@
 import React from 'react';
 import Styles from './styles';
-import { Status } from 'store/types';
+import { BillData, Status } from 'store/types';
 import getDate from 'utils/getDate';
 
 export interface PropsInvoiceCard {
   id: number;
   due: number;
-  name: string;
+  billFrom: BillData;
   total: number;
   status: Status;
 }
@@ -14,11 +14,13 @@ export interface PropsInvoiceCard {
 const InvoiceCard: React.FC<PropsInvoiceCard> = ({
   id,
   due,
-  name,
+  billFrom,
   status,
   total,
   ...props
 }) => {
+  const { name } = billFrom;
+
   return (
     <Styles.InvoiceCard {...props}>
       <Styles.Id>{`#${id}`}</Styles.Id>
