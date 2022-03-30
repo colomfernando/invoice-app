@@ -11,17 +11,20 @@ export interface BillData {
 export type Status = 'paid' | 'pending';
 export type Theme = 'lightMode' | 'darkMode';
 
+export interface Item {
+  description: string;
+  qty: number;
+  price: number;
+}
+
 export interface Invoice {
   id: number;
   date: number;
   due: number;
-  description: string;
   status: Status;
-  qty: number;
-  price: number;
-  total: number;
   billFrom: BillData;
   billTo: BillData;
+  items: Item[];
 }
 
 export interface State {

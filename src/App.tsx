@@ -17,7 +17,7 @@ const App: React.FC = () => {
         <GlobalStyles />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/invoice" element={<Invoice />} />
+          <Route path="/invoice/:id" element={<Invoice />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>

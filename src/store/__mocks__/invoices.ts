@@ -3,12 +3,9 @@ const invoices = [
   {
     id: 1,
     date: 1648513521140,
-    description: 'lorem ipsum',
     due: 1648513521143,
     status: 'paid' as Status,
-    total: 1234.54,
-    qty: 1,
-    price: 1234.54,
+    items: [{ description: 'lorem ipsum', qty: 1, price: 1234.54 }],
     billFrom: {
       name: 'Test',
       email: 'test@test.com',
@@ -27,12 +24,12 @@ const invoices = [
   {
     id: 2,
     date: 1648513521140,
-    description: 'lorem ipsum',
     due: 1648513521143,
     status: 'pending' as Status,
-    total: 1234.54,
-    qty: 1,
-    price: 1234.54,
+    items: [
+      { description: 'lorem ipsum', qty: 2, price: 1 },
+      { description: 'lorem ipsum', qty: 2, price: 2 },
+    ],
     billFrom: {
       name: 'Test',
       email: 'test@test.com',

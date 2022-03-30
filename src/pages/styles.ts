@@ -3,6 +3,7 @@ import InvoiceCard from 'components/InvoiceCard';
 import ButtonNewInvoice from 'components/ButtonNewInvoice';
 import FilterStatus from 'components/FilterStatus';
 import breakpoints from 'theme/breakpoints';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,11 +14,13 @@ const Wrapper = styled.div`
   padding: 0 10px;
 `;
 
-const Invoice = styled(InvoiceCard)`
+const LinkTo = styled(Link)`
   &:not(:last-child) {
     margin-bottom: 15px;
   }
 `;
+
+const Invoice = styled(InvoiceCard)``;
 
 const Header = styled.div`
   display: flex;
@@ -67,4 +70,5 @@ export default {
   TotalInvoice,
   CreateInvoice,
   Filter,
+  LinkTo,
 };

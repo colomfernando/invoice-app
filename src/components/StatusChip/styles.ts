@@ -10,7 +10,7 @@ const Wrapper = styled.div<PropsStatus>`
   max-width: 150px;
   border-radius: 8px;
   background-color: ${({ status }) =>
-    `rgba(${hexToRgb(palette.status[status])}, 0.1)`};
+    `rgba(${hexToRgb(palette.status[status])}, 0.2)`};
 `;
 
 const Dot = styled.span<PropsStatus>`

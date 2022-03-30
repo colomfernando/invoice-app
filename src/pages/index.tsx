@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Styles from './styles';
 import MainLayout from 'layout/MainLayout';
 import { Invoice, State, Status } from 'store/types';
@@ -45,13 +44,16 @@ const Home: React.FC = () => {
           <Styles.Filter
             onChange={(options) => handleOnChangeFilter(options)}
           />
-          <Link to="/invoice">
-            <Styles.CreateInvoice />
-          </Link>
+          <Styles.CreateInvoice />
         </Styles.Header>
         {!!invoicesState.length &&
           invoicesState.map((item) => (
-            <Styles.Invoice key={item.id} {...item} />
+            <Styles.LinkTo
+              key={item.id}
+              to={{ pathname: `/invoice/${item.id}` }}
+            >
+              <Styles.Invoice {...item} />
+            </Styles.LinkTo>
           ))}
       </Styles.Wrapper>
     </MainLayout>
