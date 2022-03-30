@@ -39,7 +39,7 @@ const Home: React.FC = () => {
         <Styles.Header>
           <Styles.WrapperTitle>
             <Styles.Title>Invoices</Styles.Title>
-            <Styles.TotalInvoice>{`${7} invoices`}</Styles.TotalInvoice>
+            <Styles.TotalInvoice>{`${invoices.length} invoices`}</Styles.TotalInvoice>
           </Styles.WrapperTitle>
           <Styles.Filter
             onChange={(options) => handleOnChangeFilter(options)}
