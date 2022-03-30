@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Styles from './styles';
 import MainLayout from 'layout/MainLayout';
 import { Invoice, State, Status } from 'store/types';
@@ -44,7 +45,9 @@ const Home: React.FC = () => {
           <Styles.Filter
             onChange={(options) => handleOnChangeFilter(options)}
           />
-          <Styles.CreateInvoice />
+          <Link to="/invoice">
+            <Styles.CreateInvoice />
+          </Link>
         </Styles.Header>
         {!!invoicesState.length &&
           invoicesState.map((item) => (
