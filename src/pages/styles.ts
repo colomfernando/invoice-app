@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import InvoiceCard from 'components/InvoiceCard';
 import ButtonNewInvoice from 'components/ButtonNewInvoice';
 import FilterStatus from 'components/FilterStatus';
+import breakpoints from 'theme/breakpoints';
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,6 +10,7 @@ const Wrapper = styled.div`
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 10px;
 `;
 
 const Invoice = styled(InvoiceCard)`
@@ -19,8 +21,14 @@ const Invoice = styled(InvoiceCard)`
 
 const Header = styled.div`
   display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  ${breakpoints.md`
+	flex-flow: row nowrap;
+	justify-content: initial;
+	`}
 `;
 
 const WrapperTitle = styled.div`
@@ -41,8 +49,13 @@ const TotalInvoice = styled.p`
 const CreateInvoice = styled(ButtonNewInvoice)``;
 
 const Filter = styled(FilterStatus)`
-  margin-left: auto;
-  margin-right: 30px;
+  width: 90%;
+  margin: 25px 0;
+  ${breakpoints.md`
+	  width: 40%;
+  	margin-left: auto;
+		margin-right: 30px;
+	`}
 `;
 
 export default {

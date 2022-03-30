@@ -1,11 +1,11 @@
 const getDate = (unixTime: number) => {
   const date = new Date(unixTime);
 
-  return date.toLocaleString('default', {
-    month: 'short',
-    day: '2-digit',
-    year: 'numeric',
-  });
+  const day = date.getDay();
+  const month = date.toLocaleString('default', { month: 'short' });
+  const year = date.toLocaleString('default', { year: 'numeric' });
+
+  return `${day} ${month} ${year}`;
 };
 
 export default getDate;

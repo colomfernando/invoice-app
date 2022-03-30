@@ -24,7 +24,7 @@ const InvoiceCard: React.FC<PropsInvoiceCard> = ({
   return (
     <Styles.InvoiceCard {...props}>
       <Styles.Id>{`#${id}`}</Styles.Id>
-      <Styles.Due>{getDate(due)}</Styles.Due>
+      <Styles.Due>{`Due ${getDate(due)}`}</Styles.Due>
       <Styles.Name>{name}</Styles.Name>
       <Styles.Total>{total}</Styles.Total>
       <Styles.Status status={status} />
