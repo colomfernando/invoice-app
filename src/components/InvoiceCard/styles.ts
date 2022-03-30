@@ -8,11 +8,12 @@ const InvoiceCard = styled.div`
   background-color: ${({ theme }) => theme.backgroundCard};
   color: ${({ theme }) => theme.text};
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px 20px;
   flex-wrap: wrap;
   width: 100%;
   ${breakpoints.md`
 		flex-wrap: nowrap;
+		padding: 20px;
 	`}
 `;
 
