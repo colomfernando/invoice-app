@@ -9,15 +9,13 @@ const invoices = [
     billFrom: {
       name: 'Test',
       email: 'test@test.com',
-      street: '9 de julio',
-      city: 'Buenos Aires',
-      postalCode: 1414,
     },
     billTo: {
       name: 'Test',
       email: 'test@test.com',
       street: '9 de julio',
       city: 'Buenos Aires',
+      country: 'Argentina',
       postalCode: 1414,
     },
   },
@@ -33,15 +31,13 @@ const invoices = [
     billFrom: {
       name: 'Test',
       email: 'test@test.com',
-      street: '9 de julio',
-      city: 'Buenos Aires',
-      postalCode: 1414,
     },
     billTo: {
       name: 'Test',
       email: 'test@test.com',
       street: '9 de julio',
       city: 'Buenos Aires',
+      country: 'Argentina',
       postalCode: 1414,
     },
   },

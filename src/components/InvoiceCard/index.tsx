@@ -1,6 +1,6 @@
 import React from 'react';
 import Styles from './styles';
-import { BillData, Item, Status } from 'store/types';
+import { BaseBillData, Item, Status } from 'store/types';
 import getDate from 'utils/getDate';
 import getTotalInvoices from 'utils/getTotalInvoice';
 import currencyFormatter from 'utils/currencyFormatter';
@@ -8,7 +8,7 @@ import currencyFormatter from 'utils/currencyFormatter';
 export interface PropsInvoiceCard {
   id: number;
   due: number;
-  billFrom: BillData;
+  billFrom: BaseBillData;
   status: Status;
   items: Item[];
 }

@@ -1,9 +1,13 @@
-export interface BillData {
+export interface BaseBillData {
   name: string;
   email: string;
+}
+
+export interface BillData extends BaseBillData {
   street: string;
   number?: number;
   complement?: string;
+  country: string;
   city: string;
   postalCode: number;
 }
@@ -22,7 +26,7 @@ export interface Invoice {
   date: number;
   due: number;
   status: Status;
-  billFrom: BillData;
+  billFrom: BaseBillData;
   billTo: BillData;
   items: Item[];
 }

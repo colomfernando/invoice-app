@@ -6,7 +6,7 @@ const MainLayout: React.FC = ({ children }) => {
   return (
     <Styles.Wrapper>
       <Menu />
-      {children}
+      <Styles.Inner>{children}</Styles.Inner>
     </Styles.Wrapper>
   );
 };

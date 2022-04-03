@@ -8,7 +8,7 @@ const Wrapper = styled.div<PropsStatus>`
   justify-content: center;
   padding: 8px 10px;
   max-width: 150px;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: ${({ status }) =>
     `rgba(${hexToRgb(palette.status[status])}, 0.2)`};
 `;
@@ -16,7 +16,7 @@ const Wrapper = styled.div<PropsStatus>`
 const Dot = styled.span<PropsStatus>`
   width: 8px;
   height: 8px;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: ${({ status }) => palette.status[status]};
   margin-right: 15px;
 `;

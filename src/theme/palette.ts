@@ -1,6 +1,6 @@
 const palette = {
   error: {
-    main: '#ff3333',
+    main: '#ED4337',
   },
   success: {
     main: '#4cc355',

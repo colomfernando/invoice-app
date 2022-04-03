@@ -11,9 +11,4 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Icon = styled.svg`
-  margin-right: 10px;
-  fill: ${({ theme }) => theme.fillIconCreateInvoice};
-`;
-
-export default { Button, Icon };
+export default { Button };

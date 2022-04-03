@@ -44,7 +44,9 @@ const Home: React.FC = () => {
           <Styles.Filter
             onChange={(options) => handleOnChangeFilter(options)}
           />
-          <Styles.CreateInvoice />
+          <Styles.LinkTo to="/create">
+            <Styles.CreateInvoice />
+          </Styles.LinkTo>
         </Styles.Header>
         {!!invoicesState.length &&
           invoicesState.map((item) => (
