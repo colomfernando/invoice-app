@@ -1,7 +1,7 @@
-const getDate = (unixTime: number) => {
-  const date = new Date(unixTime);
+const getDate = (data: string) => {
+  const date = new Date(data.replaceAll('-', '/'));
+  const day = date.getDate();
 
-  const day = date.getDay();
   const month = date.toLocaleString('default', { month: 'short' });
   const year = date.toLocaleString('default', { year: 'numeric' });
 

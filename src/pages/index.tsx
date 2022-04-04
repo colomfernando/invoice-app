@@ -44,7 +44,7 @@ const Home: React.FC = () => {
           <Styles.Filter
             onChange={(options) => handleOnChangeFilter(options)}
           />
-          <Styles.LinkTo to="/create">
+          <Styles.LinkTo to="/invoice/create">
             <Styles.CreateInvoice />
           </Styles.LinkTo>
         </Styles.Header>
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
           invoicesState.map((item) => (
             <Styles.LinkTo
               key={item.id}
-              to={{ pathname: `/invoice/${item.id}` }}
+              to={{ pathname: `/invoice/${item.id}/edit` }}
             >
               <Styles.Invoice {...item} />
             </Styles.LinkTo>

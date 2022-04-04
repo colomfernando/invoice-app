@@ -5,11 +5,11 @@ export interface BaseBillData {
 
 export interface BillData extends BaseBillData {
   street: string;
-  number?: number;
+  number?: number | string;
   complement?: string;
   country: string;
   city: string;
-  postalCode: number;
+  postalCode: number | string;
 }
 
 export type Status = 'paid' | 'pending';
@@ -17,14 +17,14 @@ export type Theme = 'lightMode' | 'darkMode';
 
 export interface Item {
   description: string;
-  qty: number;
-  price: number;
+  qty: number | string;
+  price: number | string;
 }
 
 export interface Invoice {
   id: number;
-  date: number;
-  due: number;
+  date: string;
+  due: string;
   status: Status;
   billFrom: BaseBillData;
   billTo: BillData;
@@ -41,4 +41,4 @@ export interface Action<P> {
   payload: P;
 }
 
-export type Actions = Action<Invoice> | Action<Theme>;
+export type Actions = Action<Invoice> | Action<Theme> | Action<Invoice[]>;

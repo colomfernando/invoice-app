@@ -9,7 +9,7 @@ import { Item } from 'store/types';
  * @returns The total of all the prices.
  */
 const getTotalInvoices = (items: Item[]) => {
-  const prices = items.map((item) => item.price * item.qty);
+  const prices = items.map((item) => Number(item.price) * Number(item.qty));
 
   const total = prices.reduce<number>((acc, act) => acc + act, 0);
   return total;

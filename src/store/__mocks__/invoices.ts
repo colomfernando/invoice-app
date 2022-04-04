@@ -2,8 +2,8 @@ import { Status } from 'store/types';
 const invoices = [
   {
     id: 1,
-    date: 1648513521140,
-    due: 1648513521143,
+    date: '2022-04-06',
+    due: '2022-04-07',
     status: 'paid' as Status,
     items: [{ description: 'lorem ipsum', qty: 1, price: 1234.54 }],
     billFrom: {
@@ -21,8 +21,8 @@ const invoices = [
   },
   {
     id: 2,
-    date: 1648513521140,
-    due: 1648513521143,
+    date: '2022-04-06',
+    due: '2022-04-09',
     status: 'pending' as Status,
     items: [
       { description: 'lorem ipsum', qty: 2, price: 1 },

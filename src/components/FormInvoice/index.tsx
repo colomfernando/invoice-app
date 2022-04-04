@@ -1,31 +1,47 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { initialValues, schemaValidation } from './schema';
 import Styles from './styles';
 import { FieldArray, Formik } from 'formik';
 import getLastId from 'store/selectors/getLastId';
 import { useSelector, useDispatch } from 'react-redux';
-import { State, Status } from 'store/types';
-import { actionSaveInvoice } from 'store/actions';
+import { Invoice, State, Status } from 'store/types';
+import { actionEditInvoice, actionSaveInvoice } from 'store/actions';
 import IconAdd from 'components/IconAdd';
 import IconDelete from 'components/IconDelete';
+import updateInvoices from 'store/selectors/updateInvoices';
 
-const FormInvoice: React.FC = ({ ...props }) => {
+export interface PropsFormInvoice {
+  invoiceValues?: Invoice;
+}
+
+const FormInvoice: React.FC<PropsFormInvoice> = ({
+  invoiceValues,
+  ...props
+}) => {
   const { invoices } = useSelector((state: State) => state);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleOnSubmit = (values: any) => {
-    const date = new Date(values.date).getTime();
-    const due = new Date(values.due).getTime();
+  const handleOnSubmit = (values: Omit<Invoice, 'id' | 'status'>) => {
     const id = getLastId(invoices) + 1;
-    const data = { ...values, status: 'pending' as Status, id, date, due };
+    const data = { ...values, status: 'pending' as Status, id };
     dispatch(actionSaveInvoice(data));
+    navigate('/');
+  };
+
+  const handleOnSubmitUpdate = (values: Omit<Invoice, 'id' | 'status'>) => {
+    const updatedInvoice = { ...invoiceValues, ...values } as Invoice;
+    const updateDInvoices = updateInvoices(invoices, updatedInvoice);
+    dispatch(actionEditInvoice(updateDInvoices));
+    navigate('/');
   };
 
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={invoiceValues || initialValues}
       validationSchema={schemaValidation}
-      onSubmit={handleOnSubmit}
+      onSubmit={invoiceValues ? handleOnSubmitUpdate : handleOnSubmit}
     >
       {({ values }) => (
         <Styles.FormFormik {...props}>
@@ -151,19 +167,21 @@ const FormInvoice: React.FC = ({ ...props }) => {
                           style={{ flexBasis: '20%' }}
                         />
                         {values.items.length > 1 && (
-                          <Styles.ItemButton
+                          <Styles.DeleteButton
                             Icon={IconDelete}
                             onClick={() => remove(index)}
                           />
                         )}
-                        <Styles.ItemButton
-                          Icon={IconAdd}
-                          onClick={() =>
-                            push({ description: '', qty: '', price: '' })
-                          }
-                        />
                       </Styles.WrapperItems>
                     ))}
+                  <Styles.AddButton
+                    Icon={IconAdd}
+                    onClick={() =>
+                      push({ description: '', qty: '', price: '' })
+                    }
+                  >
+                    Add item
+                  </Styles.AddButton>
                 </>
               )}
             </FieldArray>

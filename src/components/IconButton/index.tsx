@@ -12,7 +12,7 @@ const IconButton: React.FC<PropsIconButton> = ({
   ...props
 }) => {
   return (
-    <Styles.Button onClick={onClick} {...props}>
+    <Styles.Button type="button" onClick={onClick} {...props}>
       {<Icon />}
       {children}
     </Styles.Button>

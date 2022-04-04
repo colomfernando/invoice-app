@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { lightMode, darkMode } from 'theme';
 import { State } from 'store/types';
 import Home from 'pages/index';
-import Invoice from 'pages/Invoice';
+import EditInvoice from 'pages/EditInvoice';
 import CreateInvoice from 'pages/CreateInvoice';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -18,8 +18,8 @@ const App: React.FC = () => {
         <GlobalStyles />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/invoice/:id" element={<Invoice />} />
-          <Route path="/create" element={<CreateInvoice />} />
+          <Route path="/invoice/:id/edit" element={<EditInvoice />} />
+          <Route path="/invoice/create" element={<CreateInvoice />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>

@@ -50,7 +50,17 @@ const Submit = styled.button`
   color: ${({ theme }) => theme.text};
 `;
 
-const ItemButton = styled(IconButton)`
+const AddButton = styled(IconButton)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  & > svg {
+    margin-right: 10px;
+  }
+`;
+
+const DeleteButton = styled(IconButton)`
   margin-top: -0.9rem;
   width: 45px;
   height: 45px;
@@ -63,5 +73,6 @@ export default {
   WrapperSection,
   WrapperItems,
   Submit,
-  ItemButton,
+  AddButton,
+  DeleteButton,
 };

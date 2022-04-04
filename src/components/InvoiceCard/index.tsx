@@ -7,8 +7,8 @@ import currencyFormatter from 'utils/currencyFormatter';
 
 export interface PropsInvoiceCard {
   id: number;
-  due: number;
-  billFrom: BaseBillData;
+  due: string;
+  billTo: BaseBillData;
   status: Status;
   items: Item[];
 }
@@ -16,12 +16,12 @@ export interface PropsInvoiceCard {
 const InvoiceCard: React.FC<PropsInvoiceCard> = ({
   id,
   due,
-  billFrom,
+  billTo,
   status,
   items,
   ...props
 }) => {
-  const { name } = billFrom;
+  const { name } = billTo;
 
   const total = getTotalInvoices(items);
 
