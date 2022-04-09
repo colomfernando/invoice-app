@@ -11,6 +11,11 @@ export const actionEditInvoice = (payload: Invoice[]) => ({
   payload,
 });
 
+export const actionDeleteInvoice = (payload: number) => ({
+  type: types.DELETE_INVOICE,
+  payload,
+});
+
 export const actionSetTheme = (payload: Theme) => ({
   type: types.SET_THEME,
   payload,

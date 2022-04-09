@@ -52,7 +52,7 @@ const Home: React.FC = () => {
           invoicesState.map((item) => (
             <Styles.LinkTo
               key={item.id}
-              to={{ pathname: `/invoice/${item.id}/edit` }}
+              to={{ pathname: `/invoice/${item.id}` }}
             >
               <Styles.Invoice {...item} />
             </Styles.LinkTo>

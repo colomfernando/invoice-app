@@ -7,7 +7,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   color: inherit;
-  padding: 8px;
+  padding: 12px;
   cursor: pointer;
 `;
 

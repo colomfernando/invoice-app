@@ -41,4 +41,8 @@ export interface Action<P> {
   payload: P;
 }
 
-export type Actions = Action<Invoice> | Action<Theme> | Action<Invoice[]>;
+export type Actions =
+  | Action<Invoice>
+  | Action<Theme>
+  | Action<Invoice[]>
+  | Action<number>;

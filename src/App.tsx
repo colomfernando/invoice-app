@@ -6,6 +6,7 @@ import { State } from 'store/types';
 import Home from 'pages/index';
 import EditInvoice from 'pages/EditInvoice';
 import CreateInvoice from 'pages/CreateInvoice';
+import DetailsInvoice from 'pages/DetailsInvoince';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/invoice/:id/edit" element={<EditInvoice />} />
+          <Route path="/invoice/:id" element={<DetailsInvoice />} />
           <Route path="/invoice/create" element={<CreateInvoice />} />
         </Routes>
       </ThemeProvider>
