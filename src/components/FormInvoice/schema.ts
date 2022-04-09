@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 
 export const initialValues = {
-  date: '',
+  date: new Date().toISOString().split('T')[0],
   due: '',
   billFrom: {
     name: '',

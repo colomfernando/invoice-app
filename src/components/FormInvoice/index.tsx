@@ -36,7 +36,7 @@ const FormInvoice: React.FC<PropsFormInvoice> = ({
     dispatch(actionEditInvoice(updateDInvoices));
     navigate('/');
   };
-
+  console.log('initialValues :>> ', initialValues);
   return (
     <Formik
       initialValues={invoiceValues || initialValues}
