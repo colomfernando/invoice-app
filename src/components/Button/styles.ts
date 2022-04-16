@@ -7,13 +7,8 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   color: inherit;
-  padding: 12px;
+  padding: 8px 10px;
   cursor: pointer;
 `;
 
-const Icon = styled.svg`
-  margin-right: 10px;
-  fill: ${({ theme }) => theme.fillIconCreateInvoice};
-`;
-
-export default { Button, Icon };
+export default { Button };
