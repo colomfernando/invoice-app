@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import palette from 'theme/palette';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -6,9 +7,21 @@ const Wrapper = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  padding: 10px 5px;
+  padding: 15px;
   width: 100%;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  border-radius: 10px;
+`;
+
+const Header = styled(Grid)`
+  margin-bottom: 15px;
+`;
+
+const Item = styled(Grid)`
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  background-color: ${palette.grey[300]};
 `;
 
 const Description = styled.p`
@@ -27,4 +40,4 @@ const Text = styled.p`
   text-align: center;
 `;
 
-export default { Wrapper, Grid, Description, Title, Text };
+export default { Wrapper, Header, Item, Description, Title, Text };

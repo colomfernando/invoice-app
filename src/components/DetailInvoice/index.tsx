@@ -7,9 +7,10 @@ import { actionEditInvoice, actionDeleteInvoice } from 'store/actions';
 import updateInvoices from 'store/selectors/updateInvoices';
 import { useNavigate } from 'react-router-dom';
 import StatusChip from 'components/StatusChip';
+import getTotalInvoices from 'utils/getTotalInvoice';
+import currencyFormatter from 'utils/currencyFormatter';
 import Styles from './styles';
 
-// TODO crear boton reutilizable
 export interface PropsDetailInvoice {
   invoice: Invoice;
 }
@@ -46,7 +47,10 @@ const DetailInvoice: React.FC<PropsDetailInvoice> = ({ invoice, ...props }) => {
           </Styles.LinkTo>
         </Styles.EditButton>
 
-        <Styles.PaidButton onClick={handleMarksPaid}>
+        <Styles.PaidButton
+          disabled={status === 'paid'}
+          onClick={handleMarksPaid}
+        >
           mark as paid
         </Styles.PaidButton>
       </Styles.Header>
@@ -63,6 +67,11 @@ const DetailInvoice: React.FC<PropsDetailInvoice> = ({ invoice, ...props }) => {
         </Styles.Row>
         <Styles.Row>
           <DetailItems data={items} />
+        </Styles.Row>
+        <Styles.Row>
+          <Styles.Total>{`Total: ${currencyFormatter(
+            getTotalInvoices(items)
+          )}`}</Styles.Total>
         </Styles.Row>
       </Styles.Body>
     </Styles.Wrapper>

@@ -55,6 +55,13 @@ const Text = styled.p``;
 
 const LinkTo = styled(Link)``;
 
+const Total = styled.p`
+  margin: 40px 0;
+  margin-left: auto;
+  font-size: 1.3rem;
+  font-weight: 700;
+`;
+
 export default {
   Wrapper,
   Header,
@@ -66,4 +73,5 @@ export default {
   EditButton,
   PaidButton,
   DeleteButton,
+  Total,
 };

@@ -18,19 +18,19 @@ const DetailItems: React.FC<PropsDetailItems> = ({ data, ...props }) => {
 
   return (
     <Styles.Wrapper {...props}>
-      <Styles.Grid>
+      <Styles.Header>
         {titles.map((title, idx) => (
           <Styles.Title key={idx.toString()}>{title}</Styles.Title>
         ))}
-      </Styles.Grid>
+      </Styles.Header>
 
       {itemsWithTotal.map((item, idx) => (
-        <Styles.Grid key={idx.toString()}>
+        <Styles.Item key={idx.toString()}>
           <Styles.Description>{item.description}</Styles.Description>
           <Styles.Text>{item.qty}</Styles.Text>
           <Styles.Text>{currencyFormatter(Number(item.price))}</Styles.Text>
           <Styles.Text>{currencyFormatter(Number(item.total))}</Styles.Text>
-        </Styles.Grid>
+        </Styles.Item>
       ))}
     </Styles.Wrapper>
   );
