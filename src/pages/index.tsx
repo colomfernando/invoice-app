@@ -21,16 +21,15 @@ const Home: React.FC = () => {
     setInvoicesState(invoices);
   }, []);
 
-  // !FIXME: filtro cuando no hay status que coincide
   const handleOnChangeFilter = (filters: Option[]) => {
+    if (!filters.length) return setInvoicesState(invoices);
+
     const values = filters.map((option) => option.value);
-    if (!values.length) return setInvoicesState(invoices);
 
     const filterInvoices = invoices.filter((inv) =>
       values.includes(inv.status)
     );
 
-    if (!filterInvoices.length) return setInvoicesState(invoices);
     return setInvoicesState(filterInvoices);
   };
 
