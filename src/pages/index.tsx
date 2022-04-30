@@ -4,6 +4,7 @@ import MainLayout from 'layout/MainLayout';
 import { Invoice, State, Status } from 'store/types';
 import { useSelector } from 'react-redux';
 import { Option } from 'components/FilterStatus';
+import IconInvoice from 'components/IconInvoice';
 export interface Mock {
   id: number;
   due: number;
@@ -48,7 +49,7 @@ const Home: React.FC = () => {
             <Styles.CreateInvoice />
           </Styles.LinkTo>
         </Styles.Header>
-        {!!invoicesState.length &&
+        {!!invoicesState.length ? (
           invoicesState.map((item) => (
             <Styles.LinkTo
               key={item.id}
@@ -56,7 +57,13 @@ const Home: React.FC = () => {
             >
               <Styles.Invoice {...item} />
             </Styles.LinkTo>
-          ))}
+          ))
+        ) : (
+          <Styles.EmptyWrapper>
+            <IconInvoice />
+            <Styles.EmptyText>create your first invoice</Styles.EmptyText>
+          </Styles.EmptyWrapper>
+        )}
       </Styles.Wrapper>
     </MainLayout>
   );

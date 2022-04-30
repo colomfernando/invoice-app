@@ -18,7 +18,7 @@ const InvoiceCard = styled.div`
 `;
 
 const Text = styled.p`
-  flex-basis: 20%;
+  flex-basis: 30%;
 `;
 
 const Id = styled(Text)`

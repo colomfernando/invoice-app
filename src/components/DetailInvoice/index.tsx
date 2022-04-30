@@ -1,12 +1,10 @@
 import React from 'react';
 import { Invoice, State, Status } from 'store/types';
-import DetailBill from 'components/DetailBill';
 import DetailItems from 'components/DetailItems';
 import { useSelector, useDispatch } from 'react-redux';
 import { actionEditInvoice, actionDeleteInvoice } from 'store/actions';
 import updateInvoices from 'store/selectors/updateInvoices';
 import { useNavigate } from 'react-router-dom';
-import StatusChip from 'components/StatusChip';
 import getTotalInvoices from 'utils/getTotalInvoice';
 import currencyFormatter from 'utils/currencyFormatter';
 import Styles from './styles';
@@ -35,29 +33,33 @@ const DetailInvoice: React.FC<PropsDetailInvoice> = ({ invoice, ...props }) => {
   return (
     <Styles.Wrapper {...props}>
       <Styles.Header>
-        <Styles.Id>{`Invoice #${id}`}</Styles.Id>
-        <StatusChip status={status} />
-        <Styles.DeleteButton onClick={handleDeleteInvoice}>
-          delete
-        </Styles.DeleteButton>
+        <Styles.WrapperInfo>
+          <Styles.Id>{`Invoice #${id}`}</Styles.Id>
+          <Styles.Status status={status} />
+        </Styles.WrapperInfo>
+        <Styles.WrapperButtons>
+          <Styles.DeleteButton onClick={handleDeleteInvoice}>
+            delete
+          </Styles.DeleteButton>
 
-        <Styles.EditButton>
-          <Styles.LinkTo to={{ pathname: `/invoice/${id}/edit` }}>
-            Edit
-          </Styles.LinkTo>
-        </Styles.EditButton>
+          <Styles.EditButton>
+            <Styles.LinkTo to={{ pathname: `/invoice/${id}/edit` }}>
+              Edit
+            </Styles.LinkTo>
+          </Styles.EditButton>
 
-        <Styles.PaidButton
-          disabled={status === 'paid'}
-          onClick={handleMarksPaid}
-        >
-          mark as paid
-        </Styles.PaidButton>
+          <Styles.PaidButton
+            disabled={status === 'paid'}
+            onClick={handleMarksPaid}
+          >
+            mark as paid
+          </Styles.PaidButton>
+        </Styles.WrapperButtons>
       </Styles.Header>
       <Styles.Body>
         <Styles.Row>
-          <DetailBill title="From" {...billFrom} />
-          <DetailBill title="To" {...billTo} />
+          <Styles.DetailBill title="From" {...billFrom} />
+          <Styles.DetailBill title="To" {...billTo} />
         </Styles.Row>
         <Styles.Row>
           <Styles.Text>{`Invoice date: ${date}`}</Styles.Text>
