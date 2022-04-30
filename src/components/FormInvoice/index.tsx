@@ -14,7 +14,6 @@ import updateInvoices from 'store/selectors/updateInvoices';
 export interface PropsFormInvoice {
   invoiceValues?: Invoice;
 }
-// TODO agregar por default fecha actual en Date
 const FormInvoice: React.FC<PropsFormInvoice> = ({
   invoiceValues,
   ...props
