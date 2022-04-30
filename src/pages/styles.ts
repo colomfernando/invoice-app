@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
+  height: 100vh;
 `;
 
 const LinkTo = styled(Link)`
@@ -57,6 +58,18 @@ const Filter = styled(FilterStatus)`
 	`}
 `;
 
+const EmptyWrapper = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+`;
+
+const EmptyText = styled.p`
+  margin-top: 30px;
+`;
+
 export default {
   Wrapper,
   Invoice,
@@ -67,4 +80,6 @@ export default {
   CreateInvoice,
   Filter,
   LinkTo,
+  EmptyWrapper,
+  EmptyText,
 };
