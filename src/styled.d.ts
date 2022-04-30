@@ -7,8 +7,8 @@ declare module 'styled-components' {
     backgroundForm: string;
     text: string;
     backgroundCard: string;
-    backgroundCreateInvoice: string;
-    fillIconCreateInvoice: string;
+    backgroundButton: string;
+    iconButton: string;
     backgroundInput: string;
   }
 }

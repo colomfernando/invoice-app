@@ -2,6 +2,7 @@ import { State, Actions, Theme } from './types';
 import types from './actionTypes';
 import invoices from './__mocks__/invoices';
 
+// TODO: persistir redux entre navegacion de urls
 const initialState = {
   invoices: [...invoices],
   theme: 'lightMode' as Theme,

@@ -46,7 +46,7 @@ const Submit = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  background-color: ${({ theme }) => theme.backgroundCreateInvoice};
+  background-color: ${({ theme }) => theme.backgroundButton};
   color: ${({ theme }) => theme.text};
 `;
 

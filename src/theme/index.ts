@@ -3,21 +3,21 @@ import palette from './palette';
 export const lightMode = {
   body: palette.grey[200],
   backgroundCard: '#FFF',
-  backgroundCreateInvoice: '#FFF',
+  backgroundButton: '#FFF',
   backgroundForm: '#FFF',
-  fillIconCreateInvoice: '#2D4263',
+  iconButton: '#121212',
   backgroundInput: palette.grey[300],
   text: '#191919',
   backgroundMenu: palette.grey[400],
 };
 
 export const darkMode = {
-  body: '#191919',
-  backgroundCard: '#2D4263',
+  body: '#121212',
+  backgroundCard: '#711A75',
   backgroundInput: '#FBFAF8',
   backgroundForm: '#303030',
-  backgroundCreateInvoice: '#2D4263',
-  fillIconCreateInvoice: '#fff',
+  backgroundButton: '#711A75',
+  iconButton: '#fff',
   text: '#FBFAF8',
-  backgroundMenu: '#303030',
+  backgroundMenu: '#711A75',
 };
