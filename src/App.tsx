@@ -12,7 +12,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App: React.FC = () => {
   const { theme } = useSelector((state: State) => state);
-  console.log('theme :>> ', theme);
 
   return (
     <BrowserRouter>
