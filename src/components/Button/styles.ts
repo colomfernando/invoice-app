@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Button = styled.button`
   display: inline-flex;
   align-items: center;
-  background-color: ${({ theme }) => theme.backgroundButton};
+  background-color: inherit;
   border: none;
   border-radius: 5px;
   color: inherit;

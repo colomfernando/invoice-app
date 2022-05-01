@@ -1,4 +1,5 @@
 const palette = {
+  primary: '#2A9D8F',
   error: {
     main: '#ED4337',
   },

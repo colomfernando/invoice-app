@@ -9,7 +9,6 @@ const Button: React.FC<PropsButton> = ({
 
   ...props
 }) => {
-  console.log('props :>> ', props);
   return (
     <Styles.Button onClick={onClick} {...props}>
       {children}

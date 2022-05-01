@@ -6,7 +6,7 @@ const Wrapper = styled.header`
   justify-content: center;
   margin-bottom: 30px;
   padding: 15px 30px;
-  background-color: ${({ theme }) => theme.backgroundMenu};
+  background-color: inherit;
 `;
 
 const Toggle = styled(ToggleThemeMode)`

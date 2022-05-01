@@ -13,7 +13,7 @@ const Header = styled.div`
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  background-color: ${palette.grey[300]};
+  background-color: ${({ theme }) => theme.backgroundCard};
   padding: 30px 10px;
   ${breakpoints.lg`
 	  padding: 30px 20px;
@@ -25,7 +25,7 @@ const Body = styled.div`
   display: flex;
   flex-flow: column nowrap;
   padding: 30px 10px;
-  background-color: ${({ theme }) => theme.backgroundCard};
+  background-color: inherit;
   ${breakpoints.lg`
 	  padding: 30px 20px;
 	`}
@@ -73,7 +73,10 @@ const BaseButton = styled(Button)`
   }
 `;
 
-const EditButton = styled(BaseButton)``;
+const EditButton = styled(BaseButton)`
+  background-color: ${palette.grey[400]};
+  color: ${palette.common.white};
+`;
 
 const DeleteButton = styled(BaseButton)`
   margin-left: auto;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import InputForm from 'components/InputForm';
 import { Form } from 'formik';
 import IconButton from 'components/IconButton';
+import palette from 'theme/palette';
 
 const FormFormik = styled(Form)`
   display: flex;
@@ -10,7 +11,7 @@ const FormFormik = styled(Form)`
   justify-content: space-between;
   margin: 0 auto;
   padding: 20px;
-  background-color: ${({ theme }) => theme.backgroundForm};
+  background-color: ${({ theme }) => theme.backgroundCard};
 `;
 
 const Title = styled.h3`
@@ -46,8 +47,8 @@ const Submit = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  background-color: ${({ theme }) => theme.backgroundButton};
-  color: ${({ theme }) => theme.text};
+  background-color: ${palette.primary};
+  color: ${palette.common.white};
 `;
 
 const AddButton = styled(IconButton)`
@@ -55,8 +56,10 @@ const AddButton = styled(IconButton)`
   justify-content: center;
   align-items: center;
   flex-basis: 100%;
+  color: ${palette.common.white};
   & > svg {
     margin-right: 10px;
+    fill: ${palette.common.white};
   }
 `;
 

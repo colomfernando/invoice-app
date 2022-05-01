@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import palette from 'theme/palette';
 
 const Button = styled.button`
   display: inline-flex;
   align-items: center;
-  background-color: ${({ theme }) => theme.backgroundButton};
+  background-color: ${palette.primary};
   border: none;
   border-radius: 5px;
   color: inherit;

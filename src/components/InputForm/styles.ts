@@ -14,8 +14,8 @@ const Label = styled.label`
 
 const Input = styled(Field)`
   width: 100%;
-  background-color: ${({ theme }) => theme.backgroundInput};
-  color: ${({ theme }) => theme.text};
+  background-color: ${palette.grey[200]};
+  color: ${palette.common.black};
   border: none;
   border-radius: 5px;
   padding: 10px;

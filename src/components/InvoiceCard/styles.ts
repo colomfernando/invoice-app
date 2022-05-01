@@ -5,6 +5,7 @@ import breakpoints from 'theme/breakpoints';
 const InvoiceCard = styled.div`
   display: flex;
   align-items: center;
+  background-color: inherit;
   background-color: ${({ theme }) => theme.backgroundCard};
   color: ${({ theme }) => theme.text};
   border-radius: 5px;
