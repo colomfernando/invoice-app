@@ -13,7 +13,7 @@ export interface BillData extends BaseBillData {
 }
 
 export type Status = 'paid' | 'pending';
-export type Theme = 'lightMode' | 'darkMode';
+export type Theme = 'light' | 'dark';
 
 export interface Item {
   description: string;

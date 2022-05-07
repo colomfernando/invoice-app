@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  height: 100vh;
 `;
 
 const LinkTo = styled(Link)`
