@@ -1,6 +1,6 @@
 {
   "name": "invoice-app",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
